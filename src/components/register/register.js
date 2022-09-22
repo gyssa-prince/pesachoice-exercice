@@ -17,21 +17,18 @@ export default function Register() {
   async function handleSignup(e) {
     e.preventDefault();
     setError("");
-    if (emailRef.current.value.endsWith("@pesachoice.com")) {
-      if (passwordRef.current.value === retypePasswordRef.current.value) {
-        setLoading(true);
-        try {
-          await signUp(emailRef.current.value, passwordRef.current.value);
-          navigate("/dashboard");
-        } catch (err) {
-          setError(err.message);
-        }
-        setLoading(false);
-      } else {
-        setError("passwords do not match");
+
+    if (passwordRef.current.value === retypePasswordRef.current.value) {
+      setLoading(true);
+      try {
+        await signUp(emailRef.current.value, passwordRef.current.value);
+        navigate("/dashboard");
+      } catch (err) {
+        setError(err.message);
       }
+      setLoading(false);
     } else {
-      setError("only emails with pesachoice domain allowed!");
+      setError("passwords do not match");
     }
   }
 

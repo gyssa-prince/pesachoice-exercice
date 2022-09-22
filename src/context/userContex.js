@@ -4,8 +4,6 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-  GoogleAuthProvider,
-  signInWithPopup,
 } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -18,14 +16,14 @@ export function UserAuthContextProvider({ children }) {
     return signInWithEmailAndPassword(auth, email, password);
   }
   function signUp(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password);
+    if (email.endsWith("@pesachoice.com")) {
+      return createUserWithEmailAndPassword(auth, email, password);
+    } else {
+      throw new Error("only emails with pesachoice domain allowed!");
+    }
   }
   function logOut() {
     return signOut(auth);
-  }
-  function googleSignIn() {
-    const googleAuthProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleAuthProvider);
   }
 
   useEffect(() => {
@@ -40,14 +38,11 @@ export function UserAuthContextProvider({ children }) {
   }, []);
 
   return (
-    <userAuthContext.Provider
-      value={{ user, logIn, signUp, logOut, googleSignIn }}
-    >
+    <userAuthContext.Provider value={{ user, logIn, signUp, logOut }}>
       {children}
     </userAuthContext.Provider>
   );
 }
-
 export function useUserAuth() {
   return useContext(userAuthContext);
 }
