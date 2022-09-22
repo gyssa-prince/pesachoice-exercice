@@ -2,6 +2,7 @@ import { LockClosedIcon } from "@heroicons/react/20/solid";
 import { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../context/userContex";
+import logo from "../../assets/pesalogo.png";
 
 export default function Register() {
   const emailRef = useRef();
@@ -49,7 +50,7 @@ export default function Register() {
           <div>
             <img
               className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src={logo}
               alt="Your Company"
             />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
@@ -59,7 +60,7 @@ export default function Register() {
               Or{" "}
               <Link
                 to="/login"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
+                className="font-medium text-blue-600 hover:text-blue-800"
               >
                 Login
               </Link>
@@ -119,11 +120,11 @@ export default function Register() {
               {!loading && (
                 <button
                   type="submit"
-                  className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="group relative flex w-full justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                     <LockClosedIcon
-                      className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                      className="h-5 w-5 text-black group-hover:text-black"
                       aria-hidden="true"
                     />
                   </span>
@@ -134,11 +135,11 @@ export default function Register() {
                 <button
                   type="submit"
                   disabled={true}
-                  className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="group relative flex w-full justify-center rounded-md border border-transparent bg-orange-600 py-2 px-4 text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                     <LockClosedIcon
-                      className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                      className="h-5 w-5 text-black group-hover:text-black"
                       aria-hidden="true"
                     />
                   </span>

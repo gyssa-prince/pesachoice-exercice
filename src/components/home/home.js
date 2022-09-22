@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import logo from "../../assets/pesalogo.png";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -38,7 +39,7 @@ export default function Home() {
                       <img
                         alt="Your Company"
                         className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        src={logo}
                       />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
@@ -61,7 +62,7 @@ export default function Home() {
                   ))}
                   <a
                     href="login"
-                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                    className="font-medium text-indigo-600 hover:text-orange-800 text-orange-600"
                   >
                     Log in
                   </a>
@@ -85,11 +86,7 @@ export default function Home() {
                 <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                   <div className="flex items-center justify-between px-5 pt-4">
                     <div>
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt=""
-                      />
+                      <img className="h-8 w-auto" src={logo} alt="" />
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -111,7 +108,7 @@ export default function Home() {
                   </div>
                   <a
                     href="login"
-                    className="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
+                    className="text-orange-600 block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
                   >
                     Log in
                   </a>
@@ -123,21 +120,23 @@ export default function Home() {
           <main className="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">React & firebase</span>{" "}
-                <span className="block text-indigo-600 xl:inline">
-                  Tailwind css
+                <span className="block xl:inline">Streamline your HR </span>{" "}
+                <span className="block text-indigo-600 xl:inline text-orange-600">
+                  focus on what matters most!
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                We pride ourselves on providing world-class software to
+                organizations and their employees, helping them grow
+                exponentially. Whether it is prioritizing our clients through
+                our reliable HR software solution; or providing salary advances
+                to their employees. Putting people first is our priority!
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:py-4 md:px-10 md:text-lg"
                   >
                     Get started
                   </a>
@@ -145,7 +144,7 @@ export default function Home() {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="#"
-                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
+                    className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-orange-600 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
                   >
                     Live demo
                   </a>
